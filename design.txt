@@ -5,15 +5,37 @@ There's two major components to Moo; The Galaxy Map, and the tactical ship comba
 MoO is a boardgame; Just a little too complex for a physical board, but it could be done. On the galaxy map, orders are planned, and then executed simultaneously. At the end of that, if there is combat to resolve, the game enters tactical mode to resolve it. Once the turn is over, the game goes back to the galaxy map to plot the next phases orders.
 
 Order Execution:
-Planetary Productio
+Planetary production
 Racial production
+Racial spending
+Planetary spending
 Ship Movement
 Combat
 
+Racial Production:
+Each race is cycled through. 
+
 Planetary Production:
-The planet list is cycled through, Planetary production is calculated, taxes are taken out, and things are bought. BC's will be deposited into the Research trasury; I believe that it will be saner for ship production to be handled later (just before the ship movement phase) 
-Production: 1/2 the # of colonists, rounded up + the number of factories that
-they operate. 
+The planet list is cycled through, Planetary production is calculated, and
+accounted for in the racial treasury. Production: 1/2 the # of colonists, rounded up + the number of factories that
+they operate. There's a little more to it; I'm noticing a discrepancy on the
+homeworld that seems = the number of worlds controlled (it was 1, went up to 2
+and 3 roughtly the times I got those colonies up, but that's not necessarially
+it. 
 
 Racial production: 
-Each race is cycled through, 
+Each race is cycled through, and the taxes are caclulated; Ships, spies,
+reserve, as well as trade bonuses. Based on the racial treasury, the the total
+of the 'tax' is then calculated, and deducted from each planet;
+
+Algorithm:
+total racial production
+total racial 'tax' (including trade), with trade it may be negative!
+sort (planets, production)
+for (planets);
+planet.production -= floor(planet.production / race.production * race.tax)
+race.paid += floor(planet.production / race.production * race.tax)
+next planet
+//fix the flooring error
+while paid >0
+planet.production 
