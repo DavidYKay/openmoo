@@ -12,8 +12,6 @@ Planetary spending
 Ship Movement
 Combat
 
-Racial Production:
-Each race is cycled through. 
 
 Planetary Production:
 The planet list is cycled through, Planetary production is calculated, and
@@ -38,4 +36,7 @@ race.paid += floor(planet.production / race.production * race.tax)
 next planet
 //fix the flooring error
 while paid >0
-planet.production 
+   planet.production -=1
+   paid +=1
+   next planet
+
