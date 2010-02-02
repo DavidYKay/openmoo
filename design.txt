@@ -5,13 +5,15 @@ There's two major components to Moo; The Galaxy Map, and the tactical ship comba
 MoO is a boardgame; Just a little too complex for a physical board, but it could be done. On the galaxy map, orders are planned, and then executed simultaneously. At the end of that, if there is combat to resolve, the game enters tactical mode to resolve it. Once the turn is over, the game goes back to the galaxy map to plot the next phases orders.
 
 Order Execution:
-Planetary Production
+Planetary Productio
 Racial production
 Ship Movement
 Combat
 
 Planetary Production:
 The planet list is cycled through, Planetary production is calculated, taxes are taken out, and things are bought. BC's will be deposited into the Research trasury; I believe that it will be saner for ship production to be handled later (just before the ship movement phase) 
+Production: 1/2 the # of colonists, rounded up + the number of factories that
+they operate. 
 
 Racial production: 
 Each race is cycled through, 

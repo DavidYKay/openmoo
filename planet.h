@@ -37,12 +37,14 @@ char colony_name[NAMLEN_MAX];
 int missilebases;
 int planetevent;
 int rebels;
-int relocX, relocY; // 
-int 
+int relocX, relocY; // Locations 
 
 
 //Linked list?
 moo_Planet* next;
+
+public:
+void do_production();
 
 }
 
