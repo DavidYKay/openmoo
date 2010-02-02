@@ -1,0 +1,13 @@
+v.1 <-
+Single player, explore the galaxy, build stuff. No combat engine, just galaxy
+map, unit movement, production. Only the most basic of UI; but I want the
+game logic solid
+
+v.2 
+Save File, beginings of a PBEM mode.
+More work on the UI, 'combat' as well.
+
+v.3
+Seperate view and model completely; work on each player being able to
+'connect' to a central-server. 
+Think about AI
